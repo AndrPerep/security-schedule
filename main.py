@@ -10,7 +10,7 @@ COLUMNS_NUMBER = 2  # количество колонок в таблице с �
 
 def get_next_patrol(prev_patrol, break_time_interval):
     break_interval_from, break_interval_to = break_time_interval.split(',')
-    break_time = randint(float(break_interval_from), float(break_interval_to)
+    break_time = randint(float(break_interval_from), float(break_interval_to))
     rounded_break_time = timedelta(minutes=STEP*round(break_time/STEP))
 
     return prev_patrol + rounded_break_time
